@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head><title> Submit Url </title></head>
+
+<div > <h1> Hello world Post the url you want to generate a barcode for </h1></div>
+
+  <body>
+    <form method="POST" action="/barcode/url">
+        {% csrf_token %}
+      <label for="url-input">Enter a URL:</label>
+      <input type="url" id="url-input" name="url" required>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
